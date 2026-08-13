@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "yato — portfolio",
-  description: "yatoの自己紹介と制作物をまとめたポートフォリオ。",
+  title: "yato | portfolio",
+  description: "yatoのプロフィールと制作物をまとめたポートフォリオサイトです。",
   icons: {
     icon: "/favicon.svg",
   },
