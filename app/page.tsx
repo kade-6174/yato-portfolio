@@ -45,7 +45,7 @@ export default function Home() {
       <section className="about" id="about" aria-labelledby="about-title">
         <div className="section-label"><span>01</span><h2 id="about-title">about</h2></div>
         <div className="about-copy">
-          <p>兵庫県在住の高校3年生<br />カメラ、Webアプリ開発、野鳥観察が好きです。</p>
+          <p>兵庫県在住の高校3年生<br />カメラ、野鳥観察、Webアプリ開発などが好きな多趣味な人です。</p>
           <p>思いついたアイデアを、AIを使いながら少しずつWebサイトやアプリにしています。まだ勉強中ですが、作りたいものを増やしていきたいです。</p>
         </div>
       </section>
