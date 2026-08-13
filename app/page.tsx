@@ -57,7 +57,7 @@ export default function Home() {
           <div className="work-body">
             <p className="work-kind">WEB APP</p>
             <h3>Tango Dots <Arrow /></h3>
-            <p className="work-description">FSRSを使った英単語帳Webアプリ。単語を追加し、4択クイズで学習できます。</p>
+            <p className="work-description">FSRSを使って、英単語の習熟度と復習タイミングを管理する単語帳Webアプリです。</p>
           </div>
           <span className="open-label">OPEN <Arrow /></span>
         </a>
