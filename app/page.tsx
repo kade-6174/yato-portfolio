@@ -6,6 +6,7 @@ const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const [dotsActive, setDotsActive] = useState(false);
 
   useEffect(() => {
     document.documentElement.dataset.theme = darkMode ? "dark" : "light";
@@ -14,7 +15,6 @@ export default function Home() {
   return (
     <main>
       <header>
-        <a className="wordmark" href="#top">yato<span>.</span></a>
         <nav aria-label="ページ内ナビゲーション">
           <a href="#about">ABOUT</a>
           <a href="#works">WORKS</a>
@@ -35,6 +35,16 @@ export default function Home() {
         <p className="eyebrow">PERSONAL PORTFOLIO</p>
         <div className="hero-content">
           <h1 id="site-title">portfolio</h1>
+          <button
+            className={`dot-button${dotsActive ? " is-active" : ""}`}
+            type="button"
+            aria-label="ドットの表示を切り替え"
+            aria-pressed={dotsActive}
+            onClick={() => setDotsActive((value) => !value)}
+          >
+            <span aria-hidden="true"><i /><i /><i /><i /><i /><i /></span>
+            <small>DOTS</small>
+          </button>
         </div>
         <div className="hero-foot">
           <p>2008 / HYOGO, JAPAN</p>
