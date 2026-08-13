@@ -34,7 +34,7 @@ export default function Home() {
       <section className="hero" id="top" aria-labelledby="site-title">
         <p className="eyebrow">PERSONAL PORTFOLIO</p>
         <div className="hero-content">
-          <h1 id="site-title">yato&apos;s<br /><em>portfolio</em></h1>
+          <h1 id="site-title">portfolio</h1>
         </div>
         <div className="hero-foot">
           <p>2008 / HYOGO, JAPAN</p>
