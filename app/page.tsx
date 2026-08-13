@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     document.documentElement.dataset.theme = darkMode ? "dark" : "light";
@@ -15,6 +15,10 @@ export default function Home() {
     <main>
       <header>
         <a className="wordmark" href="#top">yato<span>.</span></a>
+        <nav aria-label="ページ内ナビゲーション">
+          <a href="#about">ABOUT</a>
+          <a href="#works">WORKS</a>
+        </nav>
         <button
           className="theme-toggle"
           type="button"
@@ -27,34 +31,33 @@ export default function Home() {
         </button>
       </header>
 
-      <section className="hero" id="top">
-        <p className="eyebrow">PORTFOLIO / 2026</p>
+      <section className="hero" id="top" aria-labelledby="site-title">
+        <p className="eyebrow">PERSONAL PORTFOLIO</p>
         <div className="hero-content">
-          <p className="name">yato <span>（やと）</span></p>
-          <p className="intro">兵庫県在住の高校3年生。<br />Webアプリを作っています。</p>
-          <div className="tags" aria-label="興味のあること">
-            <span>CAMERA</span><span>WEB APPS</span><span>BIRD WATCHING</span>
-          </div>
+          <h1 id="site-title">yato&apos;s<br /><em>portfolio</em></h1>
         </div>
-        <a className="x-link" href="https://x.com/yato_dev_" target="_blank" rel="noreferrer">X / @yato_dev_ <Arrow /></a>
+        <div className="hero-foot">
+          <p>2008 / HYOGO, JAPAN</p>
+          <a className="x-link" href="https://x.com/yato_dev_" target="_blank" rel="noreferrer">X / @yato_dev_ <Arrow /></a>
+        </div>
       </section>
 
-      <section className="about" aria-labelledby="about-title">
+      <section className="about" id="about" aria-labelledby="about-title">
         <div className="section-label"><span>01</span><h2 id="about-title">about</h2></div>
         <div className="about-copy">
-          <p>カメラ、Webアプリ開発、野鳥観察が好きです。</p>
+          <p>兵庫県在住の高校3年生<br />カメラ、Webアプリ開発、野鳥観察が好きです。</p>
           <p>思いついたアイデアを、AIを使いながら少しずつWebサイトやアプリにしています。まだ勉強中ですが、作りたいものを増やしていきたいです。</p>
         </div>
       </section>
 
-      <section className="works" aria-labelledby="works-title">
+      <section className="works" id="works" aria-labelledby="works-title">
         <div className="section-label"><span>02</span><h2 id="works-title">works</h2></div>
         <a className="work-card" href="https://tangodots.yato-lab.com/" target="_blank" rel="noreferrer" aria-label="Tango Dots を開く">
           <div className="work-number">01</div>
           <div className="work-body">
             <p className="work-kind">WEB APP</p>
             <h3>Tango Dots <Arrow /></h3>
-            <p className="work-description">単語と点をつなげながら楽しめる、シンプルなWebアプリです。</p>
+            <p className="work-description">FSRSを使った英単語帳Webアプリ。単語を追加し、4択クイズで学習できます。</p>
           </div>
           <span className="open-label">OPEN <Arrow /></span>
         </a>
