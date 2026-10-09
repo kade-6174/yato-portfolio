@@ -29,4 +29,4 @@ Cloudflare WorkersのGit連携またはWranglerを使って公開できます。
 
 ## 自宅サーバーでの公開
 
-`npm run build:selfhost` で静的サイトを生成できます。Docker ComposeとCloudflare Tunnelで公開する手順は [SELFHOST.md](SELFHOST.md) を参照してください。
+`npm run build:selfhost` で静的サイトを生成できます。Proxmox LXC、nginx、Cloudflare Tunnelで公開する手順は [SELFHOST.md](SELFHOST.md) を参照してください。
