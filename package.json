@@ -8,8 +8,9 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:selfhost": "vite build --config vite.selfhost.config.ts && node scripts/prerender-selfhost.mjs",
     "start": "vinext start",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern work"
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern dist-selfhost --ignore-pattern .next --ignore-pattern work"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
