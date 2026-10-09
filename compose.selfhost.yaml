@@ -1,0 +1,21 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile.selfhost
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /data:uid=10001,gid=10001
+      - /config:uid=10001,gid=10001
+    ports:
+      - "127.0.0.1:8088:8080"
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    env_file:
+      - .env.tunnel
+    restart: unless-stopped
+    depends_on:
+      - portfolio
